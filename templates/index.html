@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NIBIO Eiendomsgrenser</title>
+</head>
+<body>
+    <h1>Last ned eiendomsgrenser fra NIBIO</h1>
+    <form method="POST">
+        <label>Kommune (f.eks. 4217):</label><br>
+        <input type="text" name="kommune" required><br>
+        <label>Gårdsnummer:</label><br>
+        <input type="text" name="gnr" required><br>
+        <label>Bruksnummer:</label><br>
+        <input type="text" name="bnr" required><br><br>
+        <label>Filtype:</label><br>
+        <select name="filtype">
+            <option value="gpx">GPX</option>
+            <option value="kml">KML</option>
+        </select><br><br>
+        <button type="submit">Last ned</button>
+    </form>
+    {% if map_html %}
+    <h2>Eiendomskart:</h2>
+    <div style="height: 500px;">{{ map_html|safe }}</div>
+    {% endif %}
+</body>
+</html>
