@@ -1,7 +1,0 @@
-flask
-requests
-gpxpy
-shapely
-folium
-fastkml
-gunicorn
